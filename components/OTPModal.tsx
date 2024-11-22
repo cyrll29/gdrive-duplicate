@@ -17,6 +17,7 @@ import {
     InputOTPSeparator,
     InputOTPSlot,
 } from "@/components/ui/input-otp"
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { sendEmailOTP, verifySecret } from '@/lib/actions/user.actions';
@@ -62,7 +63,7 @@ const OTPModal = ({ accountId, email }: { accountId: string, email: string }) =>
                     </AlertDialogDescription>
                 </AlertDialogHeader>
 
-                <InputOTP maxLength={6} value={password} onChange={setPassword}>
+                <InputOTP maxLength={6} value={password} onChange={setPassword} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
                     <InputOTPGroup className='shad-otp'>
                         <InputOTPSlot index={0} className='shad-otp-slot' />
                         <InputOTPSlot index={1} className='shad-otp-slot' />
