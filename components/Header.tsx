@@ -12,9 +12,9 @@ const Header = () => {
 				<FileUploader />
 
 				<form>
-				<Button type='submit' className='sign-out-button'>
-					<Image src="/assets/icons/logout.svg" alt='logo' width={24} height={24} className='w-6' />
-				</Button>
+					<Button type='submit' className='sign-out-button'>
+						<Image src="/assets/icons/logout.svg" alt='logo' width={24} height={24} className='w-6' />
+					</Button>
 				</form>
 			</div>
 		</header>
